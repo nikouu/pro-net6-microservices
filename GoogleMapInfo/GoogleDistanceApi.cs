@@ -17,11 +17,11 @@ namespace GoogleMapInfo
             {
                 DestinationAddresses = new[]
                 {
-                    "Auckland"
+                    "Auckland, New Zealand"
                 },
                 OriginAddresses = new[]
                 {
-                    "Wellington"
+                    "Wellington, New Zealand"
                 },
                 Rows = new[]
                 {
@@ -33,18 +33,20 @@ namespace GoogleMapInfo
                             {
                                 Distance = new Distance
                                 {
-                                    Text = "Kilometers",
-                                    Value = 700
+                                    Text = "642 km",
+                                    Value = 642000
                                 },
                                 Duration = new Duration
                                 {
-                                    Text = "Hours",
-                                    Value = 10
-                                }
+                                    Text = "7 hours 49 mins",
+                                    Value = 28140
+                                },
+                                Status = "OK"
                             }
                         }
                     }
-                }
+                },
+                Status = "OK"
             };
 
             return data;
