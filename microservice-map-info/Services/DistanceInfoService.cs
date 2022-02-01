@@ -1,4 +1,6 @@
 ﻿using GoogleMapInfo;
+using Grpc.Core;
+using microservice_map_info.Protos;
 
 namespace microservice_map_info.Services
 {
@@ -18,14 +20,14 @@ namespace microservice_map_info.Services
             var totalKilometers = "0";
             var distanceData = _googleDistanceApi.GetMapDistance(cities.OriginCity, cities.DestinationCity);
 
-            foreach (var distanceDataRow in distanceData.rows)
-            {
-                foreach (var element in distanceDataRow.elements)
-                {
-                    totalKilometers = element.distance.text;
-                }
+            //foreach (var distanceDataRow in distanceData.rows)
+            //{
+            //    foreach (var element in distanceDataRow.elements)
+            //    {
+            //        totalKilometers = element.distance.text;
+            //    }
 
-            }
+            //}
 
             return new DistanceData { Kilometers = totalKilometers };
         }
